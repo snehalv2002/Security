@@ -12,9 +12,9 @@ from email.mime.base import MIMEBase
 from email import encoders
 import os.path
 
-email = 'isecur29@gmail.com'
-password = 'r0b1nh00d'
-send_to_email = 'snehalverma10@gmail.com'
+email = ''
+password = ''
+send_to_email = 'asdf@gmail.com'
 subject = 'Uh Oh'
 message = 'Uh Oh!!!!'
 
@@ -36,16 +36,12 @@ face_locations = []
 names = []
 frame_numbers = [0]
 
-vimi = face_recognition.load_image_file('known/vimi.jpg')
-tanmay = face_recognition.load_image_file('known/tanmay.jpg')
-shreyas = face_recognition.load_image_file('known/shreyas.jpg')
+person1 = face_recognition.load_image_file('known/person1.jpg')
 
-vimi_encoding = face_recognition.face_encodings(vimi)[0]
-tanmay_encoding = face_recognition.face_encodings(tanmay)[0]
-shreyas_encoding = face_recognition.face_encodings(shreyas)[0]
+person1 = face_recognition.face_encodings(person1)[0]
 
-known_encodings = [vimi_encoding, tanmay_encoding, shreyas_encoding]
-known_names = ['vimi', 'tanmay', 'shreyas']
+known_encodings = [person1]
+known_names = ['person1']
 
 for frame in cam.capture_continuous(rawCapture, format="bgr", use_video_port=True):
 
